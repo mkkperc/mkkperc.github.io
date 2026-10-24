@@ -123,10 +123,12 @@ body::before {
     left: 55px;     
     top: 50%;
     transform: translateY(-50%); 
-    font-size: 1.3rem;
+    font-size: 1.2rem; /* Чуть уменьшили размер */
     opacity: 0.9;
     z-index: 2;
     transition: all 0.3s ease;
+    width: 20px; /* Жестко задали ширину иконки */
+    text-align: center; /* Чтобы иконка была ровно по центру своей зоны */
 }
 
 .text {
@@ -136,8 +138,8 @@ body::before {
     width: 100%;   
     text-align: center; 
     margin-right: 20px;
+    margin-left: 15px; /* Сдвигаем текст чуть вправо от иконки */
 }
-
 
 
 .menu-item:hover .icon {
