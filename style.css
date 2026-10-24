@@ -103,7 +103,7 @@ body::before {
 .menu-item {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Выравниваем по левому краю */
     padding: 15px 20px;  
     background: transparent;
     border: 1px solid var(--border-color);
@@ -114,30 +114,28 @@ body::before {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    
-    padding-left: 60px; 
+    /* Убрали padding-left: 60px */
 }
 
 .icon {
-    position: absolute;
-    left: 70px;     
-    top: 50%;
-    transform: translateY(-50%); 
     font-size: 1.3rem;
     opacity: 0.9;
     z-index: 2;
     transition: all 0.3s ease;
+    width: 30px; /* Фиксированная ширина для иконки */
+    display: flex;
+    justify-content: center;
+    /* Убрали position: absolute и left: 70px */
 }
 
 .text {
     letter-spacing: 0.5px;
     font-weight: 600;
     white-space: nowrap;
-    width: 100%;   
-    text-align: center; 
-    margin-right: 20px;
+    flex-grow: 1; /* Текст занимает оставшееся место */
+    text-align: center;
+    /* Убрали margin-right: 20px */
 }
-
 
 
 .menu-item:hover .icon {
